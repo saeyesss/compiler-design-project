@@ -17,4 +17,4 @@ if __name__ == "__main__":
         row += line
         col += column
 
-    print("\n\n Recognized tokens: \n\n", token)
+    print("\n\n Unique tokens: \n\n", set(token))

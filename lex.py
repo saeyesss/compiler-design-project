@@ -26,8 +26,10 @@ class LexicalAnalyser:
             ('LT', r'<'),  # <
             ('GT', r'>'),  # >
             ('ID', r'[a-zA-Z]\w*'),  # identifiers
+            ('FORMAT', r'\%[cdsfe]'), # format specifier
             ('FLOAT_CONST', r'\d(\d)*\.\d(\d)*'),  # floating point numbers
             ('INTEGER_CONST', r'\d(\d)*'),  # integers
+            ('COMMENT', r'/\*.*?\*/'), # comment
             ('NEWLINE', r'\n'),  # NEW LINE
             ('SKIP', r'[ \t]+'),  # tabs and spaces
             ('MISMATCH', r'.'),  # any other char
@@ -60,6 +62,6 @@ class LexicalAnalyser:
                 lexeme.append(token_lexeme)
                 row.append(self.line_no)
 
-                print('token = {0},\t\t lexeme = \'{1}\''.format(token_type,token_lexeme))
+                print('token = {0},\t\tlexeme = \'{1}\''.format(token_type,token_lexeme))
 
         return token, lexeme, row, column

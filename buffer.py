@@ -2,7 +2,7 @@ def load_buffer():
     buffer = []
     cont = 1
 
-    openFile = open('prog.c', 'r')
+    openFile = open('test_program.c', 'r')
     text = openFile.readline()
 
     while text != "":
