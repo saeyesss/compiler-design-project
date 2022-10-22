@@ -2,12 +2,12 @@ def load_buffer():
     buffer = []
     cont = 1
 
-    openFile = open('test_program.c', 'r')
-    text = openFile.readline()
+    openfile = open('test_program.c', 'r')
+    text = openfile.readline()
 
     while text != "":
         buffer.append(text)
-        text = openFile.readline()
+        text = openfile.readline()
         cont += 1
 
         if cont == 10 or text == "":
@@ -18,6 +18,6 @@ def load_buffer():
             # reset buffer
             buffer = []
 
-    openFile.close()
+    openfile.close()
 
 

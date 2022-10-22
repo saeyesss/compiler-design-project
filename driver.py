@@ -1,20 +1,15 @@
 from buffer import load_buffer
-from lex import LexicalAnalyser
+from lex import tokenize
 
 if __name__ == "__main__":
-    Analyser = LexicalAnalyser()
-
     token = []
     lexeme = []
-    row = []
-    col = []
 
     # tokenize
     for i in load_buffer():
-        t, lex, line, column = Analyser.tokenize(i)
+        t, lex = tokenize(i)
         token += t
         lexeme += lex
-        row += line
-        col += column
 
-    print("\n\n Unique tokens: \n\n", set(token))
+    res = ", ".join(set(token))
+    print("\n\n Unique tokens: \n", res)
