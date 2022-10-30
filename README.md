@@ -1,8 +1,8 @@
-# C Lexer in Python
+# C Lexer/Parser in Python for parsing nested if else blocks
 
-This is a simple lexer project for a C language code snippet to find the largest number of three.
+This is a simple project for a C language code snippet to find the largest number of three.
 
-Made using regex in python.
+Lexer made using regex in python.
 
 
 Running the project requires Python 3.9
