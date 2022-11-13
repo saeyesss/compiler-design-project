@@ -1,4 +1,4 @@
-grammars = open("grammar2.txt")
+grammars = open("grammar.txt")
 G = {}
 C = {}
 terminals = []

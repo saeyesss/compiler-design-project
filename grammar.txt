@@ -1,2 +1,28 @@
-S ->
+declList -> declList decl | decl
+decl -> varDecl
+varDecl -> typeSpec varDeclList ;
+varDeclList -> varDeclList , varDeclInit | varDeclInit
+varDeclInit -> varDeclId
+varDeclId -> ID
+typeSpec -> int | bool | char | float
+
+relop -> <= | < | > | >= | == | !=
+call -> ID ( args )
+
+
+
+letter -> a | . . . | z | A | . . . | Z
+digit -> 0 | . . . | 9
+letdig -> digit | letter
+ID -> letter letdig∗
+
+stmt -> expStmt | selectStmt | printStmt
+printStmt -> printf( PRINTIN );
+PRINTIN -> "%d"
+expStmt -> exp; | ;
+selectStmt -> if  simpleExp then stmt | if simpleExp then stmt else stmt
+
+
+
+
 
