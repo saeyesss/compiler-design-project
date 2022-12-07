@@ -1,28 +1,16 @@
-declList -> declList decl | decl
-decl -> varDecl
-varDecl -> typeSpec varDeclList ;
-varDeclList -> varDeclList , varDeclInit | varDeclInit
-varDeclInit -> varDeclId
-varDeclId -> ID
-typeSpec -> int | bool | char | float
-
-relop -> <= | < | > | >= | == | !=
-call -> ID ( args )
-
-
-
-letter -> a | . . . | z | A | . . . | Z
-digit -> 0 | . . . | 9
-letdig -> digit | letter
-ID -> letter letdig∗
-
-stmt -> expStmt | selectStmt | printStmt
-printStmt -> printf( PRINTIN );
-PRINTIN -> "%d"
-expStmt -> exp; | ;
-selectStmt -> if  simpleExp then stmt | if simpleExp then stmt else stmt
-
-
-
-
-
+S -> Z Y () { B }
+B -> D I
+D -> Z E , E , E ;
+E -> X | W | V
+I -> R ( E U E ) { K } Q { K }
+K -> T ( S , E ) ; | I
+Q -> else
+R -> if
+S -> "%d"
+T -> printf
+U -> >=
+V -> n3
+W -> n2
+X -> n1
+Y -> main
+Z -> int
